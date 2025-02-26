@@ -1,5 +1,4 @@
 # Ejemplo de Convenciones de Nomenclatura en Python
-
 # Clases: CamelCase (cada palabra comienza con mayúscula)
 class VehiculoElectrico:
     def __init__(self, marca, modelo):
