@@ -9,7 +9,6 @@ def mostrar_menu():
     print("6. Mostrar inventario")
     print("7. Salir")
     return input("Seleccione una opción: ")
-
 def main():
     inventario = Inventario()
 
