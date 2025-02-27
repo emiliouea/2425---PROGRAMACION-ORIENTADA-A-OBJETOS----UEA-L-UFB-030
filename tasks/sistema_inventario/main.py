@@ -27,22 +27,6 @@ def main():
             id_producto = int(input("Ingrese ID del producto a eliminar: "))
             inventario.eliminar_producto(id_producto)
 
-        elif opcion == "3":
-            id_producto = int(input("Ingrese ID del producto: "))
-            nueva_cantidad = int(input("Ingrese nueva cantidad: "))
-            inventario.actualizar_cantidad(id_producto, nueva_cantidad)
-
-        elif opcion == "4":
-            id_producto = int(input("Ingrese ID del producto: "))
-            nuevo_precio = float(input("Ingrese nuevo precio: "))
-            inventario.actualizar_precio(id_producto, nuevo_precio)
-
-        elif opcion == "5":
-            nombre = input("Ingrese nombre a buscar: ")
-            resultados = inventario.buscar_por_nombre(nombre)
-            for producto in resultados:
-                print(producto)
-
         elif opcion == "6":
             inventario.mostrar_inventario()
 

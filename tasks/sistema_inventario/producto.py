@@ -29,5 +29,19 @@ class Producto:
         else:
             raise ValueError("❌ El precio debe ser mayor que 0.")
 
+    def to_dict(self):
+        """Convierte el objeto en un diccionario para serialización."""
+        return {
+            "id": self.id_producto,
+            "nombre": self.nombre,
+            "cantidad": self.cantidad,
+            "precio": self.precio
+        }
+
+    @classmethod
+    def from_dict(cls, data):
+        """Crea un objeto Producto desde un diccionario."""
+        return cls(data["id"], data["nombre"], data["cantidad"], data["precio"])
+
     def __str__(self):
         return f"ID: {self.id_producto} | Nombre: {self.nombre} | Cantidad: {self.cantidad} | Precio: ${self.precio:.2f}"
